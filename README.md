@@ -1,1 +1,1 @@
-# Samuel_Marttinez_Midterm
+# Samuel_Martinez_Midterm
