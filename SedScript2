@@ -1,0 +1,28 @@
+#!/bin/bash
+#This is line specifies what interpreter you want to use on the shell script
+#Samuel Martinez
+#Hashtags make text non exacutable to make in just text
+#SED
+
+echo Please enter file name #This prints to the screen
+
+read fileName #This reads user input and saves it as filename so I can reference it in the script
+
+
+sed -i '1i-Looney Tunes-' $fileName #This line uses a sed command and references the filename given by the user
+
+#2a
+
+uniq $fileName #This line uses a uniq command and refernces the filename given
+
+#3a
+
+sed -n -e 's#\s[a-zA-Z]*##g' -e 's#[0-9]*,[0-9]*##g' -e 's#[0-9]*/[0-9]*/[0-9]*:[0-9]*##gp' $fileName
+# This line uses sed to search the referenced file for specific information
+#4a
+
+sed -i '$aThats all Folks' $fileName
+#This line appends text the end of the referenced file
+
+cat $fileName
+~  
